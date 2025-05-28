@@ -10,8 +10,8 @@ Email: linhnguyen.8023@gmail.com
 
 ## Demo
 
-Link: [ToDoApp](https://todoapp-a6b36.web.app)
-Link: [Figma](https://www.figma.com/design/XZksqBHe7KYNZh4HswVRe6/Task-management---to-do-list-app--Community-?node-id=1-87&p=f&t=2JnMc1nw2aPjWCct-0)
+- Link: [ToDoApp](https://todoapp-a6b36.web.app)
+- Link: [Figma](https://www.figma.com/design/XZksqBHe7KYNZh4HswVRe6/Task-management---to-do-list-app--Community-?node-id=1-87&p=f&t=2JnMc1nw2aPjWCct-0)
 
 ## Features
 
@@ -24,23 +24,23 @@ Link: [Figma](https://www.figma.com/design/XZksqBHe7KYNZh4HswVRe6/Task-managemen
 
 ## Screenshots
 
-Start page:
+- Start page:
 ![start](image.png)
 
-Login page:
+- Login page:
 ![login](image-1.png)
 
-Main page:
+- Main page:
 ![main1](image-2.png)
 
 ![main2](image-3.png)
 
-View task:
+- View task:
 ![viewTask1](image-5.png)
 
 ![viewTask2](image-4.png)
 
-Add task:
+- Add task:
 ![add1](image-6.png)
 
 ![add2](image-7.png)
