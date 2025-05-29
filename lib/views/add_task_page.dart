@@ -166,7 +166,13 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       items: _categories.map((category) {
                         return DropdownMenuItem(
                           value: category,
-                          child: Text(category),
+                          child: Row(
+                            children: [
+                              _categoryIcon(category, MediaQuery.of(context).size.width < 700),
+                              const SizedBox(width: 8),
+                              Text(category),
+                            ],
+                          ),
                         );
                       }).toList(),
                       onChanged: (value) {
@@ -336,4 +342,42 @@ class _AddTaskPageState extends State<AddTaskPage> {
       ),
     );
   }
+
+  Widget _categoryIcon(String category, bool isMobile) {
+    Icon icon;
+    Color color;
+
+    switch (category) {
+      case 'Work':
+        icon = Icon(Icons.work, color: Color.fromARGB(255, 33, 149, 243), size: 25);
+        color = const Color.fromARGB(46, 33, 149, 243);
+        break;
+      case 'Office':
+        icon = Icon(Icons.apartment, color: const Color.fromARGB(255, 233, 30, 98), size: 25);
+        color = const Color.fromARGB(49, 233, 30, 98);
+        break;
+      case 'Personal':
+        icon = Icon(Icons.person, color: Colors.purple, size: 25);
+        color = const Color.fromARGB(42, 155, 39, 176);
+        break;
+      case 'Daily':
+        icon = Icon(Icons.calendar_today, color: Color.fromARGB(255, 255, 153, 0), size: 25);
+        color = const Color.fromARGB(42, 255, 153, 0);
+        break;
+      default:
+        icon = Icon(Icons.calendar_today, color: Colors.grey, size: 25);
+        color = const Color.fromARGB(42, 158, 158, 158);
+    }
+
+    return Container(
+      width: 30,
+      height: 30,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: icon,
+    );
+  }
+  
 }

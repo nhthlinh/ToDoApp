@@ -151,6 +151,7 @@ class _MainPageState extends State<MainPage> {
 
                               if (isMobile) {
                                 return SingleChildScrollView(
+                                  padding: const EdgeInsets.only(top: 20),
                                   controller: scrollController,
                                   child: col1,
                                 );
@@ -240,7 +241,7 @@ class _MainPageState extends State<MainPage> {
                                                 );
                                               },
                                               child: Container(
-                                                width: isMobile ? 100 : 150,
+                                                width: isMobile ? 150 : 170,
                                                 margin:
                                                     const EdgeInsets.symmetric(
                                                       vertical: 8,
@@ -397,7 +398,7 @@ class _MainPageState extends State<MainPage> {
                                           );
                                         },      
                                         child: Container(
-                                          height: isMobile ? 85 : 100,
+                                          height: isMobile ? 70 : 90,
                                           margin: const EdgeInsets.symmetric(
                                             vertical: 8,
                                             horizontal: 8,
@@ -492,7 +493,7 @@ class _MainPageState extends State<MainPage> {
                                                       : 0.0;
                                         
                                                   return CircularPercentIndicator(
-                                                    radius: 30.0,
+                                                    radius: 20.0,
                                                     lineWidth: 6.0,
                                                     percent: percent.clamp(
                                                       0.0,
@@ -504,9 +505,9 @@ class _MainPageState extends State<MainPage> {
                                                         fontSize: 12,
                                                       ),
                                                     ),
-                                                    progressColor: Colors.black,
+                                                    progressColor: _getCol(cate),
                                                     backgroundColor:
-                                                        Colors.white60,
+                                                      Colors.black12,
                                                     circularStrokeCap:
                                                         CircularStrokeCap.round,
                                                   );
@@ -530,7 +531,7 @@ class _MainPageState extends State<MainPage> {
                                 );
                               }
                               return Expanded(
-                                flex: 1,
+                                flex: 2,
                                 child: Align(
                                   alignment: Alignment.topCenter,
                                   child: SingleChildScrollView(child: col),
@@ -593,4 +594,20 @@ class _MainPageState extends State<MainPage> {
       child: icon,
     );
   }
+  
+  Color _getCol(String category) {
+    switch (category) {
+      case 'Work':
+        return const Color.fromARGB(255, 33, 149, 243);
+      case 'Office':
+        return const Color.fromARGB(255, 233, 30, 98);
+      case 'Personal':
+        return const Color.fromARGB(255, 155, 39, 176);
+      case 'Daily':
+        return const Color.fromARGB(255, 255, 153, 0);
+      default:
+        return Colors.grey;
+    }
+  }
+
 }

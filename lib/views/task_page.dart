@@ -102,7 +102,7 @@ class _TaskPageState extends State<TaskPage> {
                               style: TextButton.styleFrom(
                                 backgroundColor: isSelected
                                     ? Colors.deepPurpleAccent
-                                    : Colors.transparent,
+                                    : const Color.fromARGB(43, 124, 77, 255),
                                 foregroundColor: isSelected
                                     ? Colors.white
                                     : Colors.black,
@@ -138,11 +138,11 @@ class _TaskPageState extends State<TaskPage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount:
-                                        3, // số cột (có thể điều chỉnh)
+                                        4, // số cột (có thể điều chỉnh)
                                     crossAxisSpacing: 20,
                                     mainAxisSpacing: 20,
                                     childAspectRatio:
-                                        2.5, // tỉ lệ chiều rộng/cao cho từng card
+                                        2, // tỉ lệ chiều rộng/cao cho từng card
                                   ),
                               itemCount: taskVm.getTasksByFilter(day, filterChosen).length,
                               itemBuilder: (context, index) {

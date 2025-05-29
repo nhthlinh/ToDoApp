@@ -33,12 +33,12 @@ Email: linhnguyen.8023@gmail.com
 - Main page:
 ![main1](image-2.png)
 
-![main2](image-3.png)
+![main2](image-8.png)
 
 - View task:
-![viewTask1](image-5.png)
+![view1](image-3.png)
 
-![viewTask2](image-4.png)
+![view2](image-4.png)
 
 - Add task:
 ![add1](image-6.png)

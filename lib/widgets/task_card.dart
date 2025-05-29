@@ -115,44 +115,41 @@ class TaskCard extends StatelessWidget {
   }
 
   Widget _categoryIcon(String category, bool isMobile) {
-    IconData icon;
+    Icon icon;
     Color color;
 
     switch (category) {
       case 'Work':
-        icon = Icons.work;
-        color = const Color.fromARGB(110, 33, 149, 243);
+        icon = Icon(Icons.work, color: Color.fromARGB(255, 33, 149, 243), size: 25);
+        color = const Color.fromARGB(46, 33, 149, 243);
         break;
       case 'Office':
-        icon = Icons.apartment;
-        color = const Color.fromARGB(122, 0, 150, 135);
+        icon = Icon(Icons.apartment, color: const Color.fromARGB(255, 233, 30, 98), size: 25);
+        color = const Color.fromARGB(49, 233, 30, 98);
         break;
       case 'Personal':
-        icon = Icons.person;
-        color = const Color.fromARGB(132, 233, 30, 98);
+        icon = Icon(Icons.person, color: Colors.purple, size: 25);
+        color = const Color.fromARGB(42, 155, 39, 176);
         break;
       case 'Daily':
-        icon = Icons.calendar_today;
-        color = const Color.fromARGB(119, 255, 153, 0);
+        icon = Icon(Icons.calendar_today, color: Color.fromARGB(255, 255, 153, 0), size: 25);
+        color = const Color.fromARGB(42, 255, 153, 0);
         break;
       default:
-        icon = Icons.category;
-        color = Colors.grey;
+        icon = Icon(Icons.calendar_today, color: Colors.grey, size: 25);
+        color = const Color.fromARGB(42, 158, 158, 158);
     }
 
-    return Row(
-      children: [
-        Icon(icon, color: color, size: 20),
-        const SizedBox(width: 4),
-        Text(
-          category,
-          style: TextStyle(
-            color: color,
-            fontSize: isMobile ? 14 : 12,
-          ),
-        ),
-      ],
+    return Container(
+      width: 30,
+      height: 30,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: icon,
     );
   }
+
 
 }
